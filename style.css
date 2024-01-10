@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #fff;
+  color: #393939;
+  font-family: "Acid Grotesk";
+}
+
+span {
+  display: block;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.banner {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: -10;
+  transform: translate(-50%, -50%);
+}
+
+.banner .banner-img {
+  object-fit: contain;
+  height: 60vh;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.container {
+  position: relative;
+  height: fit-content;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: fit-content;
+  padding: 10px 0;
+}
+
+.projects .project {
+  display: flex;
+  padding: 12px 20px;
+  gap: 0px 10px;
+  cursor: pointer;
+  justify-content: flex-end;
+}
+
+.projects .project .svg {
+  opacity: 0;
+  height: 100px;
+  width: 130px;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.project h1 {
+  letter-spacing: -7px;
+  font-size: 132px;
+  line-height: 90px;
+  font-weight: 400;
+  opacity: 0.5;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.project img {
+  align-self: center;
+  object-fit: contain;
+  transition: all 0.5s ease-in-out;
+  transition: scale(0);
+}
+
+.project span p {
+  text-transform: uppercase;
+  font-size: 12px;
+  width: 0px;
+  transition: width 0.5s;
+}
+
+.project:hover h1 {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.project:hover img {
+  transform: scale(1);
+
+  transition: all 0.5s ease-in-out;
+}
+
+.project:hover span p {
+  width: 100px;
+  transition: width 0.5s;
+}
+
+.project:hover .banner .banner-img {
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+.project:hover .svg {
+  opacity: 1;
+}
